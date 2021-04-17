@@ -54,10 +54,10 @@ class PriorityQueue {
     while (true) {
       const leftIndex = Math.floor(2 * index + 1);
       const rightIndex = Math.floor(2 * index + 2);
-      let idx = leftIndex;
+      let idx = leftIndex - index;
 
       if (values[leftIndex]?.priority > values[rightIndex]?.priority)
-        idx = rightIndex;
+        idx = rightIndex - index;
 
       if (values[index]?.priority > values[idx]?.priority) {
         [values[index], values[idx]] = [values[idx], values[index]];
