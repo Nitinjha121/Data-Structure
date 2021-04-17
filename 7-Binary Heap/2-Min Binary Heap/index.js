@@ -1,4 +1,4 @@
-class MaxBinaryHeap {
+class MinBinaryHeap {
   constructor() {
     this.values = [];
   }
@@ -44,11 +44,11 @@ class MaxBinaryHeap {
 
     let index = 0;
     while (true) {
-      const leftIndex = Math.floor(2 * index + 1);
-      const rightIndex = Math.floor(2 * index + 2);
-      let idx = leftIndex;
+      const leftIndex = 2 * index + 1;
+      const rightIndex = 2 * index + 2;
+      let idx = leftIndex - index;
 
-      if (values[leftIndex] > values[rightIndex]) idx = rightIndex;
+      if (values[leftIndex] > values[rightIndex]) idx = rightIndex - index;
 
       if (values[index] > values[idx]) {
         [values[index], values[idx]] = [values[idx], values[index]];
@@ -61,7 +61,7 @@ class MaxBinaryHeap {
   }
 }
 
-const heap = new MaxBinaryHeap();
+const heap = new MinBinaryHeap();
 
 heap.insertMany([100, 34, 57, 45, 32, 150]);
 heap.insertMany([41, 39, 33, 18, 27, 12, 55]);
