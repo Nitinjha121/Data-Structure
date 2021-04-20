@@ -95,6 +95,28 @@ class Graph {
 
 const graph = new Graph();
 
+graph.addVertex("Mumbai");
+graph.addVertex("California");
+graph.addVertex("Tokyo");
+graph.addVertex("Los Angeles");
+
+graph.addEdge("Mumbai", "Tokyo");
+graph.addEdge("Mumbai", "California");
+graph.addEdge("Mumbai", "Los Angeles");
+graph.addEdge("Tokyo", "California");
+graph.addEdge("Tokyo", "Los Angeles");
+graph.addEdge("California", "Los Angeles");
+
+// graph.removeEdge("Tokyo", "California");
+// graph.removeEdge("Mumbai", "California");
+
+// graph.removeVertex("Tokyo");
+
+console.log(graph);
+console.log(graph.DFSR("Mumbai"));
+console.log(graph.DFSI("Mumbai"));
+console.log(graph.BFS("Mumbai"));
+
 graph.addVertex("A");
 graph.addVertex("B");
 graph.addVertex("C");

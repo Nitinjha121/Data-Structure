@@ -140,7 +140,7 @@ let first = new DoublyLinkedList();
 
 first.push("Hi");
 first.push("There");
-first.push("Nitin");
+first.push("I'am");
 first.push("Is");
 first.push("Here");
 
