@@ -138,11 +138,10 @@ class DoublyLinkedList {
 
 let first = new DoublyLinkedList();
 
-first.push("Hi");
-first.push("There");
-first.push("I'am");
-first.push("Is");
-first.push("Here");
+first.push(1);
+first.push("2");
+first.push("3");
+first.push(4);
 
 // console.log(first.get(0));
 console.log(first.remove(1));
